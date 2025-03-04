@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <title>Portfolio - GUYCHEL BABELA</title>
+  <style>
+
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <a href="#about">À Propos</a>
+      <a href="#experience">Expérience</a>
+      <a href="#competence">Compétences</a>
+      <a href="#projects">Projets</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div id="theme-toggle" class="theme-switch">
+      <input type="checkbox" id="theme-checkbox" class="theme-checkbox">
+      <label for="theme-checkbox" class="theme-label">
+        <span class="theme-icon sun">☀️</span>
+        <span class="theme-icon moon">🌙</span>
+      </label>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="sphere-container">
+        <!-- Icônes des langages avec des images -->
+        <div class="icon" data-icon="html">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174854.png" alt="HTML">
+        </div>
+        <div class="icon" data-icon="css">
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="CSS">
+        </div>
+        <div class="icon" data-icon="js">
+          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" alt="JavaScript">
+        </div>
+        <div class="icon" data-icon="python">
+          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python">
+        </div>
+        <div class="icon" data-icon="java">
+          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968282.png" alt="Java">
+        </div>
+        <div class="icon" data-icon="csharp">
+          <img src="https://cdn-icons-png.flaticon.com/512/6132/6132221.png" alt="C#">
+        </div>
+        <div class="icon" data-icon="php">
+          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968332.png" alt="PHP">
+        </div>
+        <div class="icon" data-icon="sql">
+          <img src="https://cdn-icons-png.flaticon.com/512/919/919836.png" alt="SQL">
+        </div>
+        <div class="icon" data-icon="angular">
+          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968322.png" alt="Angular">
+        </div>
+        <div class="icon" data-icon="symfony">
+          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968381.png" alt="Symfony">
+        </div>
+        <div class="icon" data-icon="react">
+          <img src="https://cdn-icons-png.flaticon.com/512/919/919848.png" alt="React">
+        </div>
+        <div class="icon" data-icon="nodejs">
+          <img src="https://cdn-icons-png.flaticon.com/512/919/919841.png" alt="Node.js">
+        </div>
+        <div class="icon" data-icon="ruby">
+          <img src="https://cdn-icons-png.flaticon.com/512/919/919842.png" alt="Ruby">
+        </div>
+        <div class="icon" data-icon="swift">
+          <img src="https://cdn-icons-png.flaticon.com/512/5968/5968871.png" alt="Swift">
+        </div>
+        <div class="icon" data-icon="go">
+          <img src="https://cdn-icons-png.flaticon.com/512/919/919853.png" alt="Go">
+        </div>
+      </div>
+    <img src="images/Guychel.jpg" alt="Photo de GUYCHEL BABELA">
+    <h1>GUYCHEL BABELA</h1>
+    <p>Développeur Full Stack & Passionné d'Innovation</p>
+  </section>
+
+  <!-- À Propos Section -->
+  <section id="about">
+    <h2>À Propos de Moi</h2>
+    <p>
+      Étudiant en BUT Informatique à l'IUT de Blagnac, je suis passionné par le développement web et les nouvelles technologies. J'aime créer des solutions innovantes et fonctionnelles.
+    </p>
+  </section>
+
+  <!-- Expérience Section -->
+  <section id="experience">
+    <h2>Expérience</h2>
+
+    <div class="experience-card">
+      <i class="fas fa-briefcase"></i>
+      <h3>Stage chez Agiléo-solutions</h3>
+      <p>
+        Développement d'un site web pour notaire avec Symfony et intégration d'une API gouvernementale.
+      </p>
+    </div>
+    <div class="experience-card">
+      <i class="fas fa-briefcase"></i>
+      <h3>Stage chez iologo</h3>
+      <p>
+        Réaliser et intégrer le forum de discussions dans une application existante.
+      </p>
+    </div>
+  </section>
+
+  <!-- Compétences Section -->
+  <section id="skills">
+    <h2>Languages et Outils</h2>
+
+    <!-- Bouton de bascule pour les langages et les outils -->
+    <div class="toggle-switch">
+      <input type="checkbox" id="toggle" class="toggle-checkbox">
+      <label for="toggle" class="toggle-label">
+        <!-- Bouton rond avec icônes -->
+        <span class="toggle-handle">
+          <i class="fas fa-code handle-icon" id="langages-icon"></i> <!-- Icône Langages -->
+          <i class="fas fa-tools handle-icon" id="outils-icon"></i> <!-- Icône Outils -->
+        </span>
+      </label>
+    </div>
+
+    <div class="skills-container">
+      <!-- Hard Skills -->
+      <div class="hard-skills" id="languages-section">
+        <h3>Languages</h3>
+        <br>
+        <div class="skills-grid">
+          <div class="skill">
+            <i class="fab fa-java skill-icon"></i>
+            <h3><a href="#project-ecommerce">Java</a></h3>
+            <div class="progress-bar">
+              <div class="progress" style="width: 60%;"></div>
+            </div>
+            <div class="percentage">60%</div>
+          </div>
+          <div class="skill">
+            <i class="fab fa-python skill-icon"></i>
+            <h3><a href="#project-ecommerce">Python</a></h3>
+            <div class="progress-bar">
+              <div class="progress" style="width: 40%;"></div>
+            </div>
+            <div class="percentage">40%</div>
+          </div>
+          <div class="skill">
+            <i class="fas fa-database skill-icon"></i>
+            <h3><a href="#project-bdd">SQL</a></h3>
+            <div class="progress-bar">
+              <div class="progress" style="width: 75%;"></div>
+            </div>
+            <div class="percentage">75%</div>
+          </div>
+          <div class="skill">
+            <i class="fab fa-html5 skill-icon"></i>
+            <h3><a href="#project-cv">HTML5 & CSS3</a></h3>
+            <div class="progress-bar">
+              <div class="progress" style="width: 60%;"></div>
+            </div>
+            <div class="percentage">60%</div>
+          </div>
+          <div class="skill">
+            <i class="fab fa-symfony skill-icon"></i>
+            <h3><a href="#project-qcm">Symfony</a></h3>
+            <div class="progress-bar">
+              <div class="progress" style="width: 75%;"></div>
+            </div>
+            <div class="percentage">75%</div>
+          </div>
+          <div class="skill">
+            <i class="fab fa-angular skill-icon"></i>
+            <h3><a href="#project-sport">Angular</a></h3>
+            <div class="progress-bar">
+              <div class="progress" style="width: 45%;"></div>
+            </div>
+            <div class="percentage">45%</div>
+          </div>
+          <div class="skill">
+            <i class="fab fa-php skill-icon"></i>
+            <h3><a href="#project-ecommerce">PHP</a></h3>
+            <div class="progress-bar">
+              <div class="progress" style="width: 60%;"></div>
+            </div>
+            <div class="percentage">60%</div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <!-- Outils -->
+      <div class="soft-skills" id="tools-section">
+        <h3>Outils</h3>
+        <br>
+        <div class="skills-grid">
+          <div class="skill">
+            <i class="fab fa-github skill-icon"></i>
+            <h3>Github</h3>
+            <div class="progress-bar">
+              <div class="progress" style="width: 50%;"></div>
+            </div>
+            <div class="percentage">50%</div>
+          </div>
+          <div class="skill">
+            <i class="fas fa-code skill-icon"></i>
+            <h3>Vs Code</h3>
+            <div class="progress-bar">
+              <div class="progress" style="width: 70%;"></div>
+            </div>
+            <div class="percentage">70%</div>
+          </div>
+          <div class="skill">
+            <i class="fab fa-docker skill-icon"></i>
+            <h3>Docker</h3>
+            <div class="progress-bar">
+              <div class="progress" style="width: 50%;"></div>
+            </div>
+            <div class="percentage">50%</div>
+          </div>
+          <div class="skill">
+            <i class="fas fa-bolt skill-icon"></i>
+            <h3>Vite</h3>
+            <div class="progress-bar">
+              <div class="progress" style="width: 30%;"></div>
+            </div>
+            <div class="percentage">30%</div>
+          </div>
+          <div class="skill">
+            <i class="fas fa-cogs skill-icon"></i>
+            <h3>Eclipse</h3>
+            <div class="progress-bar">
+              <div class="progress" style="width: 40%;"></div>
+            </div>
+            <div class="percentage">40%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Compétences -->
+  <section id="competences" class="competences">
+    <div class="container">
+      <h2>Mes Compétences</h2>
+      <div class="competences-grid">
+        <!-- Réaliser -->
+        <div class="competence-card">
+          <i class="fas fa-laptop-code"></i>
+          <h3>Réaliser</h3>
+          <ul>
+            <li><strong>Niveau 1</strong> : Développer des applications informatiques simples</li>
+            <li><strong>Niveau 2</strong> : Partir des exigences jusqu'à une application complète</li>
+            <li><strong>Niveau 3</strong> : Adapter des applications sur divers supports (web, mobile, IoT)</li>
+          </ul>
+        </div>
+
+        <!-- Optimiser -->
+        <div class="competence-card">
+          <i class="fas fa-chart-line"></i>
+          <h3>Optimiser</h3>
+          <ul>
+            <li><strong>Niveau 1</strong> : Appréhender et construire des algorithmes</li>
+            <li><strong>Niveau 2</strong> : Sélectionner les algorithmes adéquats</li>
+            <li><strong>Niveau 3</strong> : Analyser et optimiser des applications</li>
+          </ul>
+        </div>
+
+        <!-- Administrer -->
+        <div class="competence-card">
+          <i class="fas fa-server"></i>
+          <h3>Administrer</h3>
+          <ul>
+            <li><strong>Niveau 1</strong> : Installer et configurer un poste de travail</li>
+            <li><strong>Niveau 2</strong> : Déployer des services dans une architecture réseau</li>
+          </ul>
+        </div>
+
+        <!-- Gérer -->
+        <div class="competence-card">
+          <i class="fas fa-database"></i>
+          <h3>Gérer</h3>
+          <ul>
+            <li><strong>Niveau 1</strong> : Concevoir et mettre en place une base de données</li>
+            <li><strong>Niveau 2</strong> : Optimiser une base de données et assurer la sécurité</li>
+          </ul>
+        </div>
+
+        <!-- Conduire -->
+        <div class="competence-card">
+          <i class="fas fa-project-diagram"></i>
+          <h3>Conduire</h3>
+          <ul>
+            <li><strong>Niveau 1</strong> : Identifier les besoins métiers des clients</li>
+            <li><strong>Niveau 2</strong> : Appliquer une démarche de suivi de projet</li>
+          </ul>
+        </div>
+
+        <!-- Collaborer -->
+        <div class="competence-card">
+          <i class="fas fa-users"></i>
+          <h3>Collaborer</h3>
+          <ul>
+            <li><strong>Niveau 1</strong> : Identifier ses aptitudes pour travailler en équipe</li>
+            <li><strong>Niveau 2</strong> : Situer son rôle et ses missions dans une équipe</li>
+            <li><strong>Niveau 3</strong> : Manager une équipe informatique</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projets Section -->
+  <section id="projects">
+    <h2>Projets</h2>
+    <div class="carousel">
+      <!-- Projet 1 : Site de QCM Universitaire -->
+      <div class="project-card" id="project-qcm">
+        <img src="images/QCM.png" alt="Projet QCM Universitaire">
+        <h3><a href="https://github.com/IUT-Blagnac/sae-5-a-01-2024-2025-QCMJaune" target="_blank">Site de QCM Universitaire</a></h3>
+        <p>
+          Développement d'un site web pour des QCM universitaires avec Symfony, PHPet intégration d'un chatbot OpenAI.
+        </p>
+      </div>
+
+      <!-- Projet 2 : Site E-commerce -->
+      <div class="project-card" id="project-ecommerce">
+        <img src="images/apple-touch-icon.png" alt="Projet E-commerce">
+        <h3><a href="https://github.com/IUT-Blagnac/SAE-3-01-DevApp-G11-DisguiseHub" target="_blank">Site E-commerce</a></h3>
+        <p>
+          Création d'une boutique en ligne avec gestion d'une base de données en PHP et MySQL, ainsi que l'affichage des données en temps réel (humidité, CO₂) à l'aide de Python et JavaFX.
+        </p>
+      </div>
+
+      <!-- Projet 3 : Base de données -->
+      <div class="project-card" id="project-bdd">
+        <img src="images/Oracle.jpg" alt="Projet Base de Données">
+        <h3>Base de Données</h3>
+        <p>
+          Conception et création d'une base de données avec WinDesign et Oracle SQL.
+        </p>
+      </div>
+
+      <!-- Projet 4 : Application d'un club de sport -->
+      <div class="project-card" id="project-sport">
+        <img src="images/cardio-onglet.jpg" alt="Projet Application d'un club de sport">
+        <h3><a href="https://github.com/lilian211/S6.A.01-Evolution-d-une-appli-Club-de-Sport" target="_blank">Application d'un club de sport</a></h3>
+        <p>
+          Développement d'une application pour un club de sport avec Angular pour le front-end, Symfony pour le back-end et une gestion de base de données avec MariaDB.
+        </p>
+      </div>
+
+      <!-- Projet 5 : Site Web Personnel -->
+      <div class="project-card" id="project-cv">
+        <img src="images/site_web.png" alt="Projet Site Web Personnel">
+        <h3><a href="https://github.com/Guychelove/SiteWeb/tree/main/localweb/html2" target="_blank">Site Web Personnel</a></h3>
+        <p>
+          Création d'un site web personnel afin de comprendre les mécanismes de HTML5 et CSS3.
+        </p>
+      </div>
+    </div>
+    <button class="carousel-control prev" onclick="prevProject()">&#10094;</button>
+    <button class="carousel-control next" onclick="nextProject()">&#10095;</button>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <form action="mailto:guychelbabela@gmail.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Votre nom" required>
+      <input type="email" name="email" placeholder="Votre email" required>
+      <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+    <br>
+    <!-- Conteneur du bouton de téléchargement -->
+  <div class="download-cv">
+    <a href="images/Guychel-BABELA.pdf" download="images/Guychel-BABELA.pdf" id="download-link">
+      <button class="download-btn">Télécharger mon CV</button>
+    </a>
+    <div class="train" id="train">🚂</div> <!-- Train au lieu d'un avion -->
+  </div>
+  </section>
+
+  <!-- Footer -->
+<footer>
+  <p>© 2025 GUYCHEL BABELA</p>
+  <p>Permis B</p>
+  <p>Email: <a href="mailto:guychelbabela@gmail.com">guychelbabela@gmail.com</a></p>
+  <p>Téléphone: +33 6 56 74 83 38</p>
+  <a href="https://github.com/Guychelove" target="_blank">GitHub</a>
+  <a href="https://www.linkedin.com/in/guychel-babela-6a1b1a290/" target="_blank">LinkedIn</a>
+</footer>
+
+  <script>
+    // Changement de thème
+    const themeCheckbox = document.getElementById('theme-checkbox');
+    const body = document.body;
+
+    themeCheckbox.addEventListener('change', () => {
+      body.classList.toggle('dark-theme');
+    });
+
+    // Smooth scroll pour les liens du header
+    document.querySelectorAll('header nav a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Récupérer le bouton de bascule
+    const toggleSwitch = document.getElementById('toggle');
+
+    // Récupérer les sections
+    const languagesSection = document.getElementById('languages-section');
+    const toolsSection = document.getElementById('tools-section');
+
+    // Ajouter un écouteur d'événements pour le changement d'état
+    toggleSwitch.addEventListener('change', () => {
+      if (toggleSwitch.checked) {
+        languagesSection.style.display = 'none';
+        toolsSection.style.display = 'block';
+      } else {
+        languagesSection.style.display = 'block';
+        toolsSection.style.display = 'none';
+      }
+    });
+
+    // Carrousel de projets
+    let currentProject = 0;
+    const projects = document.querySelectorAll('.project-card');
+    const carousel = document.querySelector('.carousel');
+
+    function showProject(index) {
+      const offset = -index * 100;
+      carousel.style.transform = `translateX(${offset}%)`;
+    }
+
+    function nextProject() {
+      currentProject = (currentProject + 1) % projects.length;
+      showProject(currentProject);
+    }
+
+    function prevProject() {
+      currentProject = (currentProject - 1 + projects.length) % projects.length;
+      showProject(currentProject);
+    }
+
+    // Afficher le premier projet au chargement
+    showProject(currentProject);
+
+    // JavaScript pour déclencher l'animation du train
+    const downloadLink = document.getElementById('download-link');
+    const train = document.getElementById('train');
+
+    downloadLink.addEventListener('click', () => {
+      train.classList.add('move'); // Ajoute la classe pour l'animation
+    });
+
+    // Icônes des langages
+    // JavaScript pour positionner les icônes en sphère
+    const sphereContainer = document.querySelector('.sphere-container');
+    const icons = document.querySelectorAll('.icon');
+    const radius = 150; // Rayon de la sphère
+    const totalIcons = icons.length;
+
+    // Positionner les icônes en sphère
+    icons.forEach((icon, index) => {
+      const phi = Math.acos(-1 + (2 * index) / totalIcons); // Angle vertical
+      const theta = Math.sqrt(totalIcons * Math.PI) * phi; // Angle horizontal
+
+      const x = radius * Math.sin(phi) * Math.cos(theta);
+      const y = radius * Math.sin(phi) * Math.sin(theta);
+      const z = radius * Math.cos(phi);
+
+      icon.style.transform = `translate3d(${x}px, ${y}px, ${z}px)`;
+    });
+  </script>
+</body>
+</html>

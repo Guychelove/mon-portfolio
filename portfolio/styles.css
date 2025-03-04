@@ -1,0 +1,750 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+  background-color: #F5F5F5; /* Fond clair par défaut */
+  color: #1A1A2E; /* Texte sombre par défaut */
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #1A1A2E; /* Bleu nuit profond */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  transition: background-color 0.3s;
+}
+
+header nav a {
+  color: #F5F5F5; /* Texte blanc cassé */
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: #00B4D8; /* Bleu électrique au survol */
+}
+
+/* Style pour le switch */
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.theme-checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.theme-label {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #A0A0A0; /* Gris moyen */
+  transition: background-color 0.3s;
+  border-radius: 34px;
+}
+
+.theme-label:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: transform 0.3s;
+  border-radius: 50%;
+}
+
+.theme-checkbox:checked + .theme-label {
+  background-color: #FF2E63; /* Rose vif */
+}
+
+.theme-checkbox:checked + .theme-label:before {
+  transform: translateX(26px);
+}
+
+.theme-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  transition: opacity 0.3s;
+}
+
+.theme-icon.sun {
+  left: 6px;
+  opacity: 1;
+}
+
+.theme-icon.moon {
+  right: 6px;
+  opacity: 0;
+}
+
+.theme-checkbox:checked + .theme-label .theme-icon.sun {
+  opacity: 0;
+}
+
+.theme-checkbox:checked + .theme-label .theme-icon.moon {
+  opacity: 1;
+}
+
+/* Sections */
+section {
+  padding: 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #1A1A2E; /* Texte sombre */
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #FF2E63; /* Rose vif */
+}
+
+p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin-bottom: 1rem;
+  color: #1A1A2E; /* Texte sombre */
+}
+
+/* Section Hero */
+#hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  background-color: #1A1A2E; /* Bleu nuit profond */
+  color: #F5F5F5; /* Texte blanc cassé */
+}
+
+/* Image de profil */
+#hero img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  z-index: 2;
+}
+
+/* Titre et description */
+#hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  z-index: 2;
+  color: #F5F5F5; /* Texte blanc cassé */
+}
+
+#hero p {
+  font-size: 1.5rem;
+  z-index: 2;
+  color: #F5F5F5; /* Texte blanc cassé */
+}
+
+/* Conteneur de la sphère */
+.sphere-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+  animation: rotate-sphere 20s linear infinite;
+  z-index: 1;
+}
+
+/* Icônes des langages */
+.icon {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+}
+
+/* Images des icônes */
+.icon img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Animation de la sphère */
+@keyframes rotate-sphere {
+  from {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+  to {
+    transform: rotateY(360deg) rotateX(360deg);
+  }
+}
+
+/* About Section */
+#about {
+  background: #F5F5F5; /* Fond clair */
+  color: #1A1A2E; /* Texte sombre */
+}
+
+/* Section Expérience */
+#experience {
+  padding: 2rem;
+  background-color: #FFFFFF; /* Fond blanc */
+  text-align: center;
+}
+
+#experience h2 {
+  font-size: 2rem;
+  color: #FF2E63; /* Rose vif */
+  margin-bottom: 2rem;
+}
+
+/* Cartes d'experiences */
+.experience-card {
+  background-color: #FFFFFF; /* Fond blanc */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin: 1rem auto;
+  max-width: 600px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Icônes */
+.experience-card i {
+  font-size: 2rem;
+  color: #FF2E63; /* Rose vif */
+  margin-bottom: 1rem;
+}
+
+/* Titre des cartes */
+.experience-card h3 {
+  font-size: 1.5rem;
+  color: #1A1A2E; /* Texte sombre */
+  margin-bottom: 1rem;
+}
+
+/* Paragraphe des cartes */
+.experience-card p {
+  font-size: 1rem;
+  color: #666; /* Texte gris */
+  line-height: 1.5;
+}
+
+/* Skills Section */
+#skills {
+  background: #F5F5F5; /* Fond clair */
+  color: #1A1A2E; /* Texte sombre */
+}
+
+.skills-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 2rem;
+}
+
+.hard-skills, .soft-skills {
+  width: 48%;
+  text-align: center;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.skill {
+  background: #FFFFFF; /* Fond blanc */
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: left;
+}
+
+.skill:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.skill h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #FF2E63; /* Rose vif */
+}
+
+.skill .progress-bar {
+  background: #E0E0E0; /* Gris clair */
+  border-radius: 10px;
+  height: 10px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.skill .progress-bar .progress {
+  background: #FF2E63; /* Rose vif */
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.5s ease-in-out;
+}
+
+.skill .percentage {
+  font-size: 0.9rem;
+  color: #666; /* Texte gris */
+}
+
+.skill-icon {
+  font-size: 2rem;
+  color: #1A1A2E; /* Texte sombre */
+  margin-bottom: 10px;
+}
+
+/* Section Compétences */
+#competences {
+  background: #F5F5F5; /* Fond clair */
+  color: #1A1A2E; /* Texte sombre */
+  padding: 4rem 1rem;
+}
+
+.competences-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.competence-card {
+  background: #FFFFFF; /* Fond blanc */
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.competence-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.competence-card i {
+  font-size: 2rem;
+  color: #FF2E63; /* Rose vif */
+  margin-bottom: 1rem;
+}
+
+.competence-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #FF2E63; /* Rose vif */
+}
+
+.competence-card ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.competence-card ul li {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #666; /* Texte gris */
+}
+
+.competence-card ul li strong {
+  color: #FF2E63; /* Rose vif */
+}
+
+/* Projects Section */
+#projects {
+  background: #FFFFFF; /* Fond blanc */
+  color: #1A1A2E; /* Texte sombre */
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.project-card {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.5s ease-in-out;
+}
+
+.project-card img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #FF2E63; /* Rose vif */
+}
+
+.project-card p {
+  font-size: 1rem;
+  margin: 0 auto;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 46, 99, 0.8); /* Rose vif avec transparence */
+  color: #FFFFFF; /* Texte blanc */
+  border: none;
+  padding: 0.75rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: background 0.3s;
+}
+
+.carousel-control:hover {
+  background: rgba(255, 46, 99, 1); /* Rose vif */
+}
+
+.carousel-control.prev {
+  left: 1rem;
+}
+
+.carousel-control.next {
+  right: 1rem;
+}
+
+/* Contact Section */
+#contact {
+  background: #E0E0E0; /* Gris clair */
+  color: #1A1A2E; /* Texte sombre */
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  width: 100%;
+}
+
+#contact input, #contact textarea {
+  padding: 0.75rem;
+  border-radius: 5px;
+  border: none;
+  background: #A0A0A0; /* Gris moyen */
+  color: #FFFFFF; /* Texte blanc */
+}
+
+#contact button {
+  padding: 0.75rem;
+  border-radius: 5px;
+  border: none;
+  background: #FF2E63; /* Rose vif */
+  color: #FFFFFF; /* Texte blanc */
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#contact button:hover {
+  background: #E65A50; /* Rose plus foncé */
+}
+
+/* Conteneur du bouton de téléchargement */
+.download-cv {
+  position: relative;
+  margin-top: 20px;
+}
+
+/* Bouton de téléchargement */
+.download-btn {
+  padding: 12px 30px;
+  background-color: #FF2E63; /* Rose vif */
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.download-btn:hover {
+  background-color: #E65A50; /* Rose plus foncé */
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.download-btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation du train */
+.train {
+  position: absolute;
+  top: -50px;
+  left: -100px;
+  font-size: 2rem;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.train.move {
+  opacity: 1;
+  animation: moveTrain 3s linear forwards;
+}
+
+@keyframes moveTrain {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Style général du footer */
+footer {
+  background-color: #1A1A2E; /* Bleu nuit profond */
+  color: #F5F5F5; /* Texte blanc cassé */
+  padding: 20px 0;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  border-top: 2px solid #555;
+}
+
+/* Style des paragraphes dans le footer */
+footer p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #F5F5F5; /* Texte blanc cassé */
+}
+
+/* Style des liens dans le footer */
+footer a {
+  color: #F5F5F5; /* Texte blanc cassé */
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+/* Effet au survol des liens */
+footer a:hover {
+  color: #FF2E63; /* Rose vif */
+  text-decoration: underline;
+}
+
+/* Style spécifique pour l'email et le téléphone */
+footer a[href^="mailto:"], footer p:nth-of-type(3) {
+  font-weight: bold;
+}
+
+/* Style pour les icônes des réseaux sociaux (optionnel) */
+footer a[href*="github"]::before,
+footer a[href*="linkedin"]::before {
+  margin-right: 5px;
+}
+
+footer a[href*="github"]::before {
+  content: "🐙"; /* Icône GitHub */
+}
+
+footer a[href*="linkedin"]::before {
+  content: "🔗"; /* Icône LinkedIn */
+}
+
+/* Thème Sombre */
+body.dark-theme {
+  background-color: #1A1A2E; /* Bleu nuit profond */
+  color: #F5F5F5; /* Texte blanc cassé */
+}
+
+body.dark-theme header {
+  background-color: #1A1A2E; /* Bleu nuit profond */
+}
+
+body.dark-theme #about,
+body.dark-theme #experience,
+body.dark-theme #competence,
+body.dark-theme #projects,
+body.dark-theme #competences {
+  background-color: #2c2c4f; /* Bleu nuit plus clair */
+  color: #F5F5F5; /* Texte blanc cassé */
+}
+
+body.dark-theme .skill,
+body.dark-theme .project-card,
+body.dark-theme .competence-card {
+  background: #3a3a5f; /* Bleu nuit encore plus clair */
+  color: #F5F5F5; /* Texte blanc cassé */
+}
+
+body.dark-theme #contact {
+  background: #1A1A2E; /* Bleu nuit profond */
+}
+
+/* Style du bouton de bascule */
+/* Conteneur du switch */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  height: 34px;
+  margin-bottom: 20px;
+}
+
+/* Case à cocher invisible */
+.toggle-checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Style du switch */
+.toggle-label {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2c2c4f; /* Bleu nuit plus clair */
+  border-radius: 34px;
+  transition: background-color 0.3s;
+}
+
+/* Style du bouton rond */
+.toggle-handle {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 30px;
+  height: 30px;
+  background-color: #F5F5F5; /* Texte blanc cassé */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+}
+
+/* Style des icônes dans le bouton rond */
+.handle-icon {
+  font-size: 1rem;
+  color: #2c2c4f; /* Bleu nuit plus clair */
+  position: absolute;
+  transition: opacity 0.3s;
+}
+
+/* Position de l'icône "Langages" */
+#langages-icon {
+  left: 10px;
+}
+
+/* Position de l'icône "Outils" */
+#outils-icon {
+  right: 10px;
+  opacity: 0;
+}
+
+/* Changement de couleur du switch lorsqu'il est activé */
+.toggle-checkbox:checked + .toggle-label {
+  background-color: #FF2E63; /* Rose vif */
+}
+
+/* Déplacement du bouton rond lorsque le switch est activé */
+.toggle-checkbox:checked + .toggle-label .toggle-handle {
+  transform: translateX(86px);
+}
+
+/* Masquer "Langages" et afficher "Outils" lorsque le switch est activé */
+.toggle-checkbox:checked + .toggle-label #langages-icon {
+  opacity: 0;
+}
+
+.toggle-checkbox:checked + .toggle-label #outils-icon {
+  opacity: 1;
+}
+
+/* Masquer/afficher les sections */
+#tools-section {
+  display: none;
+}
+
+.toggle-checkbox:checked ~ .skills-container #languages-section {
+  display: none;
+}
+
+.toggle-checkbox:checked ~ .skills-container #tools-section {
+  display: block;
+}
+
+/* Alignement horizontal des sections */
+.skills-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#languages-section, #tools-section {
+  flex: 1;
+  margin: 0 10px;
+}
